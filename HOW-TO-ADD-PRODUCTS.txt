@@ -1,0 +1,35 @@
+NOTUN FURNITURE CHHOBI KIVABE ADD KORBE
+=======================================
+
+Shudhu chhobi "products" folder-er shothik jaygay rakho. Website nijey nijei chhobi dekhabe.
+
+FOLDER-ER NIYOM
+  products/furniture/bed/         -> khat
+  products/furniture/dining/      -> dining set
+  products/furniture/wardrobe/    -> wardrobe, almirah
+  products/furniture/showcase/    -> showcase
+  products/furniture/office/      -> office chair, study table
+  products/furniture/other/       -> onno furniture
+  products/decor/flower/          -> fuler tob
+  products/decor/plant/           -> gach
+  products/decor/hanging/         -> jhulonto basket
+  products/decor/wall/            -> dewal-er sajano
+
+Notun category chao? Notun folder banao, jemon  products/furniture/sofa/
+Folder-er naam-i button hoye jabe.
+
+CHHOBI-R NAAM = PRODUCT-ER NAAM
+  Royal Sofa Set.jpg                       -> English naam
+  Royal Sofa Set__রয়েল সোফা সেট.jpg         -> English + Bangla naam (duita underscore __ diye)
+  Modern Bed [AI].jpg                      -> [AI] likhle "AI design preview" tag ashbe
+
+Format: jpg, png ba webp. Chhobi 1 MB-er niche rakhle site fast thake
+(WhatsApp theke pathano chhobi thik ache).
+
+UPLOAD KORAR PORE
+  GitHub-e chhobi upload korle (Add file > Upload files, products/... folder-e),
+  1-5 minute-er moddhe live site-e chole ashbe. Kono code lagbe na.
+
+TOMAR COMPUTER-E LOCAL PREVIEW CHAILE
+  Terminal-e ei folder-e giye:   node update-products.js
+  Tarpor index.html kholo.
