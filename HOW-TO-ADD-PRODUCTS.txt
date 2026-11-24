@@ -1,35 +1,67 @@
-NOTUN FURNITURE CHHOBI KIVABE ADD KORBE
-=======================================
+NOTUN PRODUCT KIVABE ADD KORBE  (sohoj bhabe)
+=============================================
 
-Shudhu chhobi "products" folder-er shothik jaygay rakho. Website nijey nijei chhobi dekhabe.
+Shob product ekta file-e thake:   assets/js/data/catalog.js
+Website nijei oi file theke product dekhay. Design bodlate hoy na.
 
-FOLDER-ER NIYOM
-  products/furniture/bed/         -> khat
-  products/furniture/dining/      -> dining set
-  products/furniture/wardrobe/    -> wardrobe, almirah
-  products/furniture/showcase/    -> showcase
-  products/furniture/office/      -> office chair, study table
-  products/furniture/other/       -> onno furniture
-  products/decor/flower/          -> fuler tob
-  products/decor/plant/           -> gach
-  products/decor/hanging/         -> jhulonto basket
-  products/decor/wall/            -> dewal-er sajano
+--------------------------------------------------------------
+PODDHOTI 1 (shobcheye shohoj): shudhu chhobi rakho
+--------------------------------------------------------------
+Chhobi ekta folder-e rakho:
 
-Notun category chao? Notun folder banao, jemon  products/furniture/sofa/
-Folder-er naam-i button hoye jabe.
+  FURNITURE
+    assets/furniture/beds/         khat
+    assets/furniture/sofas/        sofa
+    assets/furniture/dining/       dining set
+    assets/furniture/tables/       table
+    assets/furniture/chairs/       chair
+    assets/furniture/wardrobes/    wardrobe, almirah
+    assets/furniture/showcases/    showcase
+    assets/furniture/office/       office chair, study table
+    assets/furniture/storage/      bedside, drawer
 
-CHHOBI-R NAAM = PRODUCT-ER NAAM
-  Royal Sofa Set.jpg                       -> English naam
-  Royal Sofa Set__রয়েল সোফা সেট.jpg         -> English + Bangla naam (duita underscore __ diye)
-  Modern Bed [AI].jpg                      -> [AI] likhle "AI design preview" tag ashbe
+  HOME DECOR
+    assets/home-decor/flower-pots/       fuler tob
+    assets/home-decor/plants/            gach
+    assets/home-decor/hanging-baskets/   jhulonto basket
+    assets/home-decor/vases/             fuldani
+    assets/home-decor/flowers/           sajano ful
+    assets/home-decor/wall-decor/        dewal-er sajano
+    assets/home-decor/table-decor/       table decor
+    assets/home-decor/accessories/       accessories
+    assets/home-decor/styling/           home styling
 
-Format: jpg, png ba webp. Chhobi 1 MB-er niche rakhle site fast thake
-(WhatsApp theke pathano chhobi thik ache).
+Chhobir naam = product-er naam:
+    Royal Sofa Set.webp                    -> English naam
+    Royal Sofa Set__রয়েল সোফা সেট.webp      -> English + Bangla naam (majhkhane duita underscore __)
 
-UPLOAD KORAR PORE
-  GitHub-e chhobi upload korle (Add file > Upload files, products/... folder-e),
-  1-5 minute-er moddhe live site-e chole ashbe. Kono code lagbe na.
+Ek-i product-er aro chhobi dile naam-er pashe -2, -3 likho:
+    royal-sofa-set.webp   (main)
+    royal-sofa-set-2.webp (aro ekta angle)   -> product page-e gallery hoye jabe
 
-TOMAR COMPUTER-E LOCAL PREVIEW CHAILE
-  Terminal-e ei folder-e giye:   node update-products.js
-  Tarpor index.html kholo.
+GitHub-e upload korar 1-5 minute pore live site-e chhobi chole ashbe.
+
+--------------------------------------------------------------
+PODDHOTI 2: price, rong, maap, description shoho (recommended)
+--------------------------------------------------------------
+assets/js/data/catalog.js kholo. Ekta product-er block copy kore paste koro, tarpor
+naam, chhobi, description, price, colors, dimensions bodle nao. Shob field-er byakkha
+oi file-er shuru-te lekha ache.
+
+  price: null      -> "Request a Quote" dekhabe
+  price: 18500     -> "Tk 18,500" dekhabe
+
+--------------------------------------------------------------
+3D MODEL (.glb) pore dite chaile
+--------------------------------------------------------------
+GLB file assets/models/ folder-e rakho, tarpor oi product-er block-e likho:
+    model: "assets/models/royal-sofa.glb",
+    modelExact: true      (jodi model-ta ei product-er hubohu model hoy)
+Model dile product page-e 3D viewer ashbe ar Virtual Showroom-er room-e boshbe.
+Model na thakle shudhu real chhobi dekhay. Kono generic 3D ke real product bole dekhano hoy na.
+
+--------------------------------------------------------------
+LOCAL PREVIEW (nijer computer-e dekhte)
+--------------------------------------------------------------
+Terminal-e ei folder-e giye:   node tools/sync-catalog.js
+Tarpor  index.html  browser-e kholo.

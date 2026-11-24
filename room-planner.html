@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Room Planner | Talukder Furniture & Home Decor</title>
+<meta name="description" content="Plan your room layout before you buy. Drag beds, sofas, wardrobes and dining tables in a simple 2D planner and send the plan to Talukder Furniture on WhatsApp.">
+<meta property="og:title" content="Room Planner | Talukder Furniture & Home Decor">
+<meta property="og:description" content="Plan your room layout before you buy. Drag beds, sofas, wardrobes and dining tables in a simple 2D planner and send the plan to Talukder Furniture on WhatsApp.">
+<meta property="og:image" content="assets/showroom/bed-carved.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/branding/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+.pl{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start}
+.pl aside{background:#fff;border:1px solid var(--line);border-radius:4px;padding:20px;position:sticky;top:100px}
+.pl h4{font-family:var(--sans);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);margin:18px 0 10px;font-weight:600}.pl h4:first-child{margin-top:0}
+.pl .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pl label{font-size:.78rem;color:var(--mute);display:block}
+.pl input{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:3px;background:var(--off)}
+.pk{display:flex;align-items:center;gap:9px;width:100%;text-align:left;padding:8px 10px;border:1px solid var(--line);border-radius:3px;margin-bottom:6px;font-size:.84rem;background:#fff;transition:.2s}
+.pk:hover{border-color:var(--gold);background:var(--cream)}.pk i{width:14px;height:14px;border-radius:3px;flex:none}.pk small{margin-left:auto;color:var(--mute);font-size:.72rem}
+.pl .acts{display:flex;gap:6px;flex-wrap:wrap}
+.canvas{background:#fff;border:1px solid var(--line);border-radius:4px;padding:10px}
+#plan{width:100%;height:auto;max-height:72vh;touch-action:none;user-select:none;display:block}
+#selBox{display:none;background:var(--cream);padding:12px;border-radius:4px;margin-top:6px}
+@media(max-width:900px){.pl{grid-template-columns:1fr}.pl aside{position:static}}
+</style></head>
+<body data-page="planner">
+<div id="hdr"></div>
+
+<section class="banner" style="min-height:240px"><img src="assets/showroom/showroom-1.webp" alt="" style="object-position:center 72%"><div class="wrap"><div class="crumbs"><a href="index.html" data-i18n="home"></a> / <span data-i18n="planner"></span></div><h1 data-i18n="planH"></h1><p data-i18n="planP"></p></div></section>
+<section class="sec" style="padding-top:40px"><div class="wrap"><div class="pl">
+  <aside>
+    <h4 data-i18n="plRoom"></h4><div class="two"><div><label data-i18n="plW"></label><input id="rw" type="number" min="4" max="40" step="0.5"></div><div><label data-i18n="plL"></label><input id="rh" type="number" min="4" max="40" step="0.5"></div></div>
+    <h4 data-i18n="plAdd"></h4><div id="pal"></div>
+    <div id="selBox"><h4 style="margin-top:0" data-i18n="plSel"></h4><b id="selName"></b><div class="two" style="margin:10px 0"><div><label data-i18n="plW"></label><input id="iw" type="number" step="0.5" min="0.5"></div><div><label data-i18n="plL"></label><input id="ih" type="number" step="0.5" min="0.5"></div></div>
+      <div class="acts"><button class="btn line sm" id="rot" data-i18n="plRot"></button><button class="btn line sm" id="dup" data-i18n="plDup"></button><button class="btn line sm" id="del" data-i18n="plDel"></button></div></div>
+  </aside>
+  <div><div class="canvas"><svg id="plan" xmlns="http://www.w3.org/2000/svg"></svg></div>
+    <p class="note" style="margin-top:14px"><span data-i18n="plHint"></span> <span data-i18n="plNote"></span></p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px"><a class="btn wa" id="send" target="_blank" rel="noopener" data-i18n="plSend"></a><button class="btn line" id="png" data-i18n="plPng"></button><button class="btn line" id="clr" data-i18n="plClr"></button><span style="align-self:center;color:var(--mute);font-size:.86rem"><span data-i18n="plItems"></span>: <b id="count">0</b></span></div></div>
+</div></div></section>
+<div id="ftr"></div>
+<script src="assets/js/data/catalog.js?v=202611242350"></script>
+<script src="assets/js/data/discovered.js?v=202611242350"></script>
+<script src="assets/js/app.js?v=202611242350"></script>
+<script src="assets/js/planner.js?v=202611242350"></script>
+</body>
+</html>
